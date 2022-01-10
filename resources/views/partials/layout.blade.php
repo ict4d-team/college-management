@@ -84,13 +84,10 @@
                                     <a href="{{route('index')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Admin</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
+                                    <a href="{{route('students.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>
+                                    <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>
                                 </li>
                             </ul>
                         </li>
@@ -98,13 +95,10 @@
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
+                                    <a href="{{route('students.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Student Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
+                                    <a href="{{route('students.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
                                 </li>
 
                             </ul>
@@ -113,30 +107,10 @@
                             <a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
+                                    <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Teacher Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Add Teacher</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Payment</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
-                            <ul class="nav sub-group-menu">
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>All Parents</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Parents Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Add Parent</a>
+                                    <a href="{{route('teachers.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Add Teacher</a>
                                 </li>
                             </ul>
                         </li>
