@@ -12,7 +12,7 @@ class TeacherController extends Controller
 
     public function add(){
         $data = [
-            'title' => ""
+            'title' => "Add a Teacher - ",
         ];
 
         return view('teachers.add', $data);

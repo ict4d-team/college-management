@@ -20,63 +20,49 @@
                     <h3>Add New Student</h3>
                 </div>
             </div>
-            <form class="new-added-form">
+            <form class="new-added-form" method="POST" action="{{route('students.create')}}">
+                @csrf
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>First Name *</label>
-                        <input type="text" placeholder="" class="form-control">
+                        <input type="text" placeholder="John" class="form-control" value="{{old('firstname')}}" name="firstname" @error('firstname') is-invalid @enderror required>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>Last Name *</label>
-                        <input type="text" placeholder="" class="form-control">
+                        <input type="text" placeholder="Doe" class="form-control" value="{{old('lastname')}}" name="lastname" @error('lastname') is-invalid @enderror required>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>Gender *</label>
-                        <select class="form-control" required>
+                        <select class="form-control" required name="gender" @error('gender') is-invalid @enderror>
                             <option value>Please Select Gender *</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="3">Others</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
                         </select>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>Date Of Birth *</label>
-                        <input type="date" placeholder="dd/mm/yyyy" class="form-control" data-position='bottom right'>
+                        <input type="date" placeholder="dd/mm/yyyy" class="form-control" data-position='bottom right' name="date_of_birth" required @error('date_of_birth') is-invalid @enderror>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                        <label>Roll</label>
-                        <input type="text" placeholder="" class="form-control">
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>E-Mail</label>
-                        <input type="email" placeholder="" class="form-control">
+                        <input type="email" placeholder="" class="form-control" value="{{old('email')}}" name="email">
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                        <label>Class *</label>
-                        <select class="form-control" required>
-                            <option value>Please Select Class *</option>
-                            <option value="1">from 1</option>
-                            <option value="2">from 2</option>
-                            <option value="3">from 3</option>
-                            <option value="3">from 4</option>
-                        </select>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                        <label>Admission ID</label>
-                        <input type="text" placeholder="" class="form-control">
-                    </div>
-                    <div class="col-lg-6 col-12 form-group">
-                        <label>Short BIO</label>
-                        <textarea class="textarea form-control" name="message" id="form-message" cols="10" rows="9"></textarea>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
                         <label>Phone</label>
-                        <input type="text" placeholder="" class="form-control">
+                        <input type="text" placeholder="" class="form-control" value="{{old('phone')}}" name="phone">
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group mg-t-30">
-                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
-                        <input type="file" class="form-control-file">
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
+                        <label>Address</label>
+                        <input type="text" placeholder="" class="form-control" value="{{old('address')}}" name="address" required @error('address') is-invalid @enderror>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-12 form-group">
+                        <label>Class *</label>
+                        <select class="form-control" required name="classe" @error('classe') is-invalid @enderror>
+                            <option value>Please Select Class *</option>
+                            @foreach($classes as $class)
+                                <option value="{{$class->id}}">{{ucwords($class->name)}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-12 form-group mg-t-8">
                         <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
