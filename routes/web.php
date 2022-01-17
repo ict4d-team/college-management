@@ -35,9 +35,9 @@ Route::group(['prefix' => 'teachers'], function(){
     Route::get('/{teacher_id}', [TeacherController::class, 'details'])->name('teachers.details');
 });
 
-Route::group(['prefix' => 'parents'], function(){
-    Route::get('/', [ParentController::class, 'index'])->name('parents.index');
-    Route::get('/add', [ParentController::class, 'add'])->name('parents.add');
-    Route::get('/create', [ParentController::class, 'create'])->name('parents.create');
-    Route::get('/{parent_id}', [ParentController::class, 'details'])->name('parents.details');
-});
+//Route::group(['prefix' => 'parents'], function(){
+//    Route::get('/', [ParentController::class, 'index'])->name('parents.index');
+//    Route::get('/add', [ParentController::class, 'add'])->name('parents.add');
+//    Route::get('/create', [ParentController::class, 'create'])->name('parents.create');
+//    Route::get('/{parent_id}', [ParentController::class, 'details'])->name('parents.details');
+//});

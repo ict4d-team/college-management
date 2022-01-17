@@ -89,9 +89,9 @@
                                 <li class="nav-item">
                                     <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{route('parents.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>
-                                </li>
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="{{route('parents.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>--}}
+{{--                                </li>--}}
                             </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
@@ -123,23 +123,23 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
-                            <ul class="nav sub-group-menu">
-                                <li class="nav-item">
-                                    <a href="{{route('parents.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Parents</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Parents Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('parents.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Add Parent</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0);" class="nav-link"><i class="flaticon-settings"></i><span>Account</span></a>
-                        </li>
+{{--                        <li class="nav-item sidebar-nav-item">--}}
+{{--                            <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>--}}
+{{--                            <ul class="nav sub-group-menu">--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="{{route('parents.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Parents</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Parents Details</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="{{route('parents.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Add Parent</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="javascript:void(0);" class="nav-link"><i class="flaticon-settings"></i><span>Account</span></a>--}}
+{{--                        </li>--}}
 
                     </ul>
                 </div>
