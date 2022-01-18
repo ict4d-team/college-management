@@ -141,6 +141,10 @@
 {{--                            <a href="javascript:void(0);" class="nav-link"><i class="flaticon-settings"></i><span>Account</span></a>--}}
 {{--                        </li>--}}
 
+                        <li class="nav-item">
+                            <a href="{{route('provisor.index')}}" class="nav-link"><i class="flaticon-settings"></i><span>Provisor</span></a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
