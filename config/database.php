@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+$DATABASE_URL=parse_url("postgres://uhqcqjmwxmjkvw:3c02550c23778d8f92f5c761c3b790eef2b152212101efce7e37776be7601b96@ec2-34-239-196-254.compute-1.amazonaws.com:5432/d2hk2169qtvc4i"); //Utilisé par Heroku Postgres
 
 return [
 
