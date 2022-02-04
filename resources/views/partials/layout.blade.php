@@ -87,7 +87,7 @@
                                     <a href="{{route('students.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
+                                    <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>
                                 </li>
 {{--                                <li class="nav-item">--}}
 {{--                                    <a href="{{route('parents.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Teachers</a>--}}
