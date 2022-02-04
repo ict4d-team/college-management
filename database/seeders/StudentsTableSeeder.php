@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Student;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class StudentsTableSeeder extends Seeder
 {
@@ -14,6 +15,9 @@ class StudentsTableSeeder extends Seeder
      */
     public function run()
     {
-        Student::factory()->count(250)->create();
+        $bd = "database/seeders/students.sql";
+        DB::unprepared(file_get_contents($bd));
+
+        // Student::factory()->count(2800)->create();
     }
 }
