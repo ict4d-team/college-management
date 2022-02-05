@@ -7,29 +7,11 @@
                 <h3>All Teachers Data</h3>
             </div>
         </div>
-        <form class="mg-b-20">
-            <div class="row gutters-8">
-                <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                    <input type="text" placeholder="Search by ID ..." class="form-control">
-                </div>
-                <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                    <input type="text" placeholder="Search by Name ..." class="form-control">
-                </div>
-                <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                    <input type="text" placeholder="Search by Phone ..." class="form-control">
-                </div>
-                <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
-                    <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
-                </div>
-            </div>
-        </form>
         <div class="table-responsive">
-            <table class="table display data-table text-nowrap">
+            <table class="table display" id="teachers_list">
                 <thead>
                     <tr>
-                        <th>N°</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
+                        <th>Name</th>
                         <th>Gender</th>
                         <th>Email</th>
                         <th>Phone</th>
@@ -48,9 +30,7 @@
                 @else
                     @foreach($teachers as $teacher)
                     <tr>
-                        <td>{{$i}}</td>
-                        <td>{{ucwords($teacher->firstname)}}</td>
-                        <td>{{ucwords($teacher->lastname)}}</td>
+                        <td>{{ucwords($teacher->name)}}</td>
                         <td>{{ucwords($teacher->gender)}}</td>
                         <td>{{$teacher->email}}</td>
                         <td>{{$teacher->phone}}</td>
@@ -69,4 +49,12 @@
             </table>
         </div>
     </div>
+@endsection
+
+@section("js")
+    <script>
+        $(document).ready( function () {
+            $("#teachers_list").DataTable();
+        } );
+    </script>
 @endsection

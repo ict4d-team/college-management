@@ -27,6 +27,14 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- Modernize js -->
     <script src="{{asset('assets/js/modernizr-3.6.0.min.js')}}"></script>
+    <!-- jquery-->
+    <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+    @yield("css")
+
 </head>
 
 <body>
@@ -101,9 +109,6 @@
                                     <a href="{{route('students.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Student Details</a>
-                                </li>
-                                <li class="nav-item">
                                     <a href="{{route('students.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
                                 </li>
 
@@ -114,9 +119,6 @@
                             <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
                                     <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link"><i class="fas fa-angle-right"></i>Teacher Details</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('teachers.add')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Add Teacher</a>
@@ -160,8 +162,6 @@
         </div>
         <!-- Page Area End Here -->
     </div>
-    <!-- jquery-->
-    <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
     <!-- Plugins js -->
     <script src="{{asset('assets/js/plugins.js')}}"></script>
     <!-- Popper js -->
@@ -182,6 +182,8 @@
     <script src="{{asset('assets/js/Chart.min.js')}}"></script>
     <!-- Custom Js -->
     <script src="{{asset('assets/js/main.js')}}"></script>
+
+    @yield("js")
 
 </body>
 

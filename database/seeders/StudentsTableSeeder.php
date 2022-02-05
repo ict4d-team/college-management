@@ -15,9 +15,9 @@ class StudentsTableSeeder extends Seeder
      */
     public function run()
     {
-        $bd = "database/seeders/students.sql";
-        DB::unprepared(file_get_contents($bd));
+//        $bd = "database/seeders/students.sql";
+//        DB::unprepared(file_get_contents($bd));
 
-        // Student::factory()->count(2800)->create();
+        Student::factory()->count(500)->create();
     }
 }

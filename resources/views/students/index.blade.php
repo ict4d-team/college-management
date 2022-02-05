@@ -19,44 +19,30 @@
                 <div class="item-title">
                     <h3>All Students Data</h3>
                 </div>
-                <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">...</a>
-
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-times text-orange-red"></i>Close</a>
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                    </div>
-                </div>
             </div>
-            <form class="mg-b-20">
-                <div class="row gutters-8">
-                    <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Roll ..." class="form-control">
-                    </div>
-                    <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Name ..." class="form-control">
-                    </div>
-                    <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Class ..." class="form-control">
-                    </div>
-                    <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
-                        <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
-                    </div>
-                </div>
-            </form>
+{{--            <form class="mg-b-20">--}}
+{{--                <div class="row gutters-8">--}}
+{{--                    <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">--}}
+{{--                        <input type="text" placeholder="Search by Roll ..." class="form-control">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">--}}
+{{--                        <input type="text" placeholder="Search by Name ..." class="form-control">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">--}}
+{{--                        <input type="text" placeholder="Search by Class ..." class="form-control">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">--}}
+{{--                        <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </form>--}}
             <div class="table-responsive">
-                <table class="table display data-table text-nowrap">
+                <table class="table display" id="students_list">
                     <thead>
                     <tr>
-                        <th>N°</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
+                        <th>Name</th>
                         <th>Gender</th>
-                        <th>Date Of Birth</th>
+                        <th>Birth</th>
                         <th>E-mail</th>
                         <th>Phone</th>
                         <th>Address</th>
@@ -73,9 +59,7 @@
                     @else
                         @foreach($students as $student)
                             <tr>
-                                <td>{{$i}}</td>
-                                <td>{{ucwords($student->firstname)}}</td>
-                                <td>{{ucwords($student->lastname)}}</td>
+                                <td>{{ucwords($student->name)}}</td>
                                 <td>{{ucwords($student->gender)}}</td>
                                 <td>{{ucwords($student->date_of_birth)}}</td>
                                 <td>{{$student->email}}</td>
@@ -83,7 +67,7 @@
                                 <td>{{$student->address}}</td>
                                 <td>{{ucwords($student->classe->name)}}</td>
                                 <td>
-                                    <a class="" href="{{route('students.details', ['student_id' => $student->id])}}"><i class="fas fa-cogs text-dark-pastel-green"></i>Details</a>
+                                    <a class="" href="{{route('students.details', ['student_id' => $student->id])}}">voir</a>
                                     <a class="text-danger" href="{{route('students.delete', ['student_id' => $student->id])}}">del</a>
                                 </td>
                             </tr>
@@ -95,4 +79,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section("js")
+    <script>
+        $(document).ready( function () {
+            $("#students_list").DataTable();
+        } );
+    </script>
 @endsection
