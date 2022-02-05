@@ -87,9 +87,9 @@
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
-                            <ul class="nav sub-group-menu">
+                            <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
-                                    <a href="{{route('index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+                                    <a href="{{route('index')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Admin</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('students.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
@@ -116,12 +116,12 @@
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
-                            <ul class="nav sub-group-menu sub-group-active">
+                            <ul class="nav sub-group-menu">
                                 <li class="nav-item">
                                     <a href="{{route('teachers.index')}}" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('teachers.add')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Add Teacher</a>
+                                    <a href="{{route('teachers.add')}}" class="nav-link"><i class="fas fa-angle-right"></i>Add Teacher</a>
                                 </li>
                             </ul>
                         </li>
